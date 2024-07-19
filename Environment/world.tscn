@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbm6elu2penla"]
+
+[ext_resource type="Script" path="res://Environment/asteroid_spawner.gd" id="1_g1be8"]
+[ext_resource type="PackedScene" uid="uid://b6ssys0h2sh34" path="res://Environment/asteroid_spawner.tscn" id="2_5nbqx"]
+
+[sub_resource type="Environment" id="Environment_vdp7u"]
+background_mode = 1
+background_color = Color(0.0353471, 0.0106447, 0.145119, 1)
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_g1be8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vdp7u")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.88202, 0.408082, -0.235606, 0, 0.5, 0.866025, 0.471212, -0.763852, 0.44101, 0, 2, 5)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.960084, -0.132479, 0.246349, 0, -0.880725, -0.473627, 0.279712, 0.454722, -0.84557, 0, -3.77378, -4.88165)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
+
+[node name="AsteroidSpawner" parent="." instance=ExtResource("2_5nbqx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 85, 0)
