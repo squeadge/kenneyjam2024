@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4ua87b4c4fcn"]
+
+[ext_resource type="Script" path="res://Environment/gate_portal.gd" id="1_toh0p"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ptt3g"]
+height = 0.5
+radius = 20.0
+
+[node name="GatePortal" type="Area3D"]
+script = ExtResource("1_toh0p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_ptt3g")

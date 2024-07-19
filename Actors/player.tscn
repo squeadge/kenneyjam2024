@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://dres48hkuibnq"]
+[gd_scene load_steps=6 format=3 uid="uid://dres48hkuibnq"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_6qy6k"]
+[ext_resource type="Script" path="res://Actors/player.gd" id="1_6qy6k"]
+[ext_resource type="PackedScene" uid="uid://rldx7xyh2u11" path="res://Actors/health.tscn" id="2_8cs75"]
+[ext_resource type="PackedScene" uid="uid://4rndrel8nlb3" path="res://Actors/player_input.tscn" id="3_nc3wr"]
+[ext_resource type="PackedScene" uid="uid://cqlv1v1mvkspx" path="res://Assets/3D/SpaceShips/inherited/craft_speeder_a.tscn" id="4_uh6dm"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qflyp"]
+points = PackedVector3Array(-0.0756742, 0.627337, -0.515212, 1.01667, 0.216709, 0.666432, -0.963178, 0.1, 0.631369, 0.199309, 0.200595, -0.981555, 0.495834, 0, 1.0238, -0.516494, 0.516647, 1.06646, -1.01667, 0.216709, 0.333216, -0.0831963, 0.816667, 0.366412, 0.516494, 0.516647, 1.06646, -0.199309, 0.200595, -0.981555, -0.495834, 0, 1.0238, 0.2, 0.415369, -0.984957, 0.516494, -0.0166667, 0.633027, 1.01667, 0.216709, 0.333216, 0.191275, 0.679702, -0.117656, -0.516494, -0.0166667, 0.633027, -0.2, 0.415369, -0.984957, 0.934359, 0.108976, 0.306239, 0.383141, 0.683216, 0.566425, -0.934359, 0.108976, 0.306239, -0.383141, 0.683216, 0.566425, -1.01667, 0.216709, 0.666432, -0.191273, 0.679698, -0.117655, 0.0831963, 0.816667, 0.366412, 0.963178, 0.1, 0.631369, -0.193311, 0.0280455, 0.237818, 0.0731953, 0.678595, -0.351756, 0.193311, 0.0280455, 0.237818, -0.0731953, 0.678595, -0.351756, 0.0756742, 0.627337, -0.515212, -0.105725, 0.535831, -0.724841, 0.194999, 0.444954, -0.900165)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_6qy6k")
+
+[node name="Health" parent="." instance=ExtResource("2_8cs75")]
+
+[node name="PlayerInput" parent="." instance=ExtResource("3_nc3wr")]
+
+[node name="craft_speederA" parent="." instance=ExtResource("4_uh6dm")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("ConvexPolygonShape3D_qflyp")

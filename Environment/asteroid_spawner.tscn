@@ -4,8 +4,3 @@
 
 [node name="AsteroidSpawner" type="Node3D"]
 script = ExtResource("1_o8e1a")
-
-[node name="SpawnTimer" type="Timer" parent="."]
-autostart = true
-
-[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

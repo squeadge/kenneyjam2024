@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4by2c4gylamk"]
+
+[ext_resource type="PackedScene" uid="uid://c50mutmraatio" path="res://Assets/3D/Environment/rocks_smallA.glb" id="1_dk640"]
+
+[node name="rocks_smallA" instance=ExtResource("1_dk640")]
+
+[node name="rocks_smallA" parent="tmpParent" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

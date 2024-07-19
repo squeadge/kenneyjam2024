@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/craft_speederB.glb-822b5fbf92b530dc0f75fdee11
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

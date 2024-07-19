@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b21n5ws02014p"]
+
+[ext_resource type="PackedScene" uid="uid://c0hmrshv37ebi" path="res://Assets/3D/Environment/gate_complex.glb" id="1_vh1j2"]
+
+[node name="gate_complex" instance=ExtResource("1_vh1j2")]
+
+[node name="gate_complex" parent="tmpParent" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

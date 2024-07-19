@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://k6hy7ncuobf5"]
+
+[ext_resource type="Script" path="res://Actors/Camera.gd" id="1_h8o1q"]
+
+[node name="PlayerCamera" type="Node3D"]
+script = ExtResource("1_h8o1q")
+
+[node name="Camera" type="Camera3D" parent="."]
+fov = 60.0
+near = 1.0
+far = 80000.0

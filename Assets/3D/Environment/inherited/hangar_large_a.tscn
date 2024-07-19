@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d27rwc2vtv6xe"]
+
+[ext_resource type="PackedScene" uid="uid://dp2xqm85hqpo4" path="res://Assets/3D/Environment/hangar_largeA.glb" id="1_p0sce"]
+
+[node name="hangar_largeA" instance=ExtResource("1_p0sce")]
+
+[node name="hangar_largeA" parent="tmpParent" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

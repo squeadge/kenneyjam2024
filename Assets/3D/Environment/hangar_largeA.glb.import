@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/hangar_largeA.glb-3c0606798bb0560f882ddbe5d75
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
