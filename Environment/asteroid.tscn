@@ -1,15 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://txb5lqofsrfq"]
+[gd_scene load_steps=5 format=3 uid="uid://txb5lqofsrfq"]
 
 [ext_resource type="Script" path="res://Environment/asteroid.gd" id="1_2ynq5"]
 [ext_resource type="PackedScene" uid="uid://brbyhywhhuojf" path="res://Assets/3D/Environment/inherited/meteor_detailed.tscn" id="1_8u0ej"]
+[ext_resource type="PackedScene" uid="uid://rldx7xyh2u11" path="res://Actors/health.tscn" id="3_3d6dr"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_gm5f2"]
 radius = 0.42
 
 [node name="Asteroid" type="Area3D"]
+collision_mask = 17
 script = ExtResource("1_2ynq5")
 
 [node name="meteor_detailed" parent="." instance=ExtResource("1_8u0ej")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_gm5f2")
+
+[node name="Health" parent="." instance=ExtResource("3_3d6dr")]
+health = 200.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

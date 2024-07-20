@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dbm6elu2penla"]
+[gd_scene load_steps=20 format=3 uid="uid://dbm6elu2penla"]
 
 [ext_resource type="Script" path="res://Environment/world.gd" id="1_b58p4"]
 [ext_resource type="PackedScene" uid="uid://b6ssys0h2sh34" path="res://Environment/asteroid_spawner.tscn" id="2_5nbqx"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b6w5ytlil60h1" path="res://Environment/giant_asteroid_ground.tscn" id="5_5yog0"]
 [ext_resource type="PackedScene" uid="uid://bjmgyqqkqtm4" path="res://Environment/gate.tscn" id="6_0t8wj"]
 [ext_resource type="PackedScene" uid="uid://c4ua87b4c4fcn" path="res://Environment/gate_portal.tscn" id="7_nxvk6"]
+[ext_resource type="PackedScene" uid="uid://cft6gj53dw3y2" path="res://Actors/bullet_spawner.tscn" id="8_gy5yy"]
+[ext_resource type="PackedScene" uid="uid://cco0okua84son" path="res://Actors/CargoCrates/cargo.tscn" id="9_r0mbh"]
 
 [sub_resource type="Environment" id="Environment_vdp7u"]
 background_mode = 1
@@ -200,7 +202,7 @@ transform = Transform3D(0.88202, 0.408082, -0.235606, 0, 0.5, 0.866025, 0.471212
 transform = Transform3D(0.960084, -0.132479, 0.246349, 0, -0.880725, -0.473627, 0.279712, 0.454722, -0.84557, 0, -3.77378, -4.88165)
 
 [node name="Player" parent="." instance=ExtResource("3_rmcwy")]
-transform = Transform3D(6.12323e-17, 0, -1, 0, 1, 0, 1, 0, 6.12323e-17, 0, 27.3708, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.7284, -76.7639, -152.792)
 
 [node name="PlayerCamera" parent="." instance=ExtResource("4_yn0d1")]
 target_path = NodePath("../Player")
@@ -209,7 +211,7 @@ target_path = NodePath("../Player")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15000, 2000, 0)
 
 [node name="GiantAsteroidGround" parent="." instance=ExtResource("5_5yog0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -92.8373, 0)
 
 [node name="Gate" parent="." instance=ExtResource("6_0t8wj")]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -100, 0)
@@ -256,3 +258,26 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hangar2"]
 shape = SubResource("ConvexPolygonShape3D_j0co6")
+
+[node name="BulletSpawner" parent="." instance=ExtResource("8_gy5yy")]
+
+[node name="Cargo" parent="." instance=ExtResource("9_r0mbh")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -195.596)
+
+[node name="Cargo2" parent="." instance=ExtResource("9_r0mbh")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -302.445)
+
+[node name="Cargo3" parent="." instance=ExtResource("9_r0mbh")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -238.094)
+
+[node name="Cargo4" parent="." instance=ExtResource("9_r0mbh")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -159.976)
+
+[node name="Cargo5" parent="." instance=ExtResource("9_r0mbh")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -214.503)
+
+[node name="Cargo6" parent="." instance=ExtResource("9_r0mbh")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -264.311)
+
+[node name="Cargo7" parent="." instance=ExtResource("9_r0mbh")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -335.334)

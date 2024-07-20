@@ -19,10 +19,10 @@ func spawn_asteroid() -> void:
 	asteroid.global_transform.origin = global_transform.origin
 	asteroid.global_transform.origin += global_transform.basis.z * rng.randf_range(-10000.0, 10000.0)
 	asteroid.global_transform.origin += global_transform.basis.y * rng.randf_range(-400.0, 400.0)
-	asteroid.velocity = Vector3(-(0.1 + rng.randf()) * 30, rng.randf_range(-0.5, 0.5), rng.randf_range(-0.5, 0.5))
-	asteroid.scale = Vector3.ONE * 100 * rng.randf()
-	asteroid.rot_x = rng.randf()
-	asteroid.rot_y = rng.randf()
-	asteroid.rot_z = rng.randf()
+	asteroid.velocity = Vector3(-(0.1 + rng.randf()) * 1000, rng.randf_range(-0.5, 0.5), rng.randf_range(-0.5, 0.5))
+	asteroid.scale = Vector3.ONE * 500 * rng.randf()
+	asteroid.rot_x = rng.randf_range(-1.0, 1.0)
+	asteroid.rot_y = rng.randf_range(-1.0, 1.0)
+	asteroid.rot_z = rng.randf_range(-1.0, 1.0)
 
 

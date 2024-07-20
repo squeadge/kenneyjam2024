@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cft6gj53dw3y2"]
+
+[ext_resource type="Script" path="res://Actors/BulletSpawner.gd" id="1_oq0eb"]
+
+[node name="BulletSpawner" type="Node3D"]
+script = ExtResource("1_oq0eb")

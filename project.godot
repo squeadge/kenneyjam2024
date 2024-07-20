@@ -13,7 +13,10 @@ config_version=5
 config/name="KenneyJam2024"
 run/main_scene="res://Environment/world.tscn"
 config/features=PackedStringArray("4.2", "Double Precision", "GL Compatibility")
-config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalSignals="*res://Globals/global_signals.gd"
 
 [input]
 
